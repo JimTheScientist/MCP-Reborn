@@ -60,23 +60,7 @@ import net.minecraft.client.gui.advancements.AdvancementsScreen;
 import net.minecraft.client.gui.chat.NarratorChatListener;
 import net.minecraft.client.gui.fonts.FontResourceManager;
 import net.minecraft.client.gui.recipebook.RecipeList;
-import net.minecraft.client.gui.screen.ChatScreen;
-import net.minecraft.client.gui.screen.ConfirmBackupScreen;
-import net.minecraft.client.gui.screen.ConfirmScreen;
-import net.minecraft.client.gui.screen.ConnectingScreen;
-import net.minecraft.client.gui.screen.DatapackFailureScreen;
-import net.minecraft.client.gui.screen.DeathScreen;
-import net.minecraft.client.gui.screen.DirtMessageScreen;
-import net.minecraft.client.gui.screen.EditWorldScreen;
-import net.minecraft.client.gui.screen.IngameMenuScreen;
-import net.minecraft.client.gui.screen.MainMenuScreen;
-import net.minecraft.client.gui.screen.MemoryErrorScreen;
-import net.minecraft.client.gui.screen.MultiplayerScreen;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.SleepInMultiplayerScreen;
-import net.minecraft.client.gui.screen.WinGameScreen;
-import net.minecraft.client.gui.screen.WorkingScreen;
-import net.minecraft.client.gui.screen.WorldLoadProgressScreen;
+import net.minecraft.client.gui.screen.*;
 import net.minecraft.client.gui.screen.inventory.CreativeScreen;
 import net.minecraft.client.gui.screen.inventory.InventoryScreen;
 import net.minecraft.client.gui.social.FilterManager;
@@ -831,7 +815,7 @@ public class Minecraft extends RecursiveEventLoop<Runnable> implements ISnooperI
          }
       }
 
-      if (guiScreenIn instanceof MainMenuScreen || guiScreenIn instanceof MultiplayerScreen) {
+      if (guiScreenIn instanceof MainMenuScreen || guiScreenIn instanceof MultiplayerScreen || guiScreenIn instanceof VersionScreen) {
          this.gameSettings.showDebugInfo = false;
          this.ingameGUI.getChatGUI().clearChatMessages(true);
       }
@@ -849,9 +833,6 @@ public class Minecraft extends RecursiveEventLoop<Runnable> implements ISnooperI
       }
 
       this.setDefaultMinecraftTitle();
-   }
-   public void changeVersion(){
-
    }
    public void setLoadingGui(@Nullable LoadingGui loadingGuiIn) {
       this.loadingGui = loadingGuiIn;
