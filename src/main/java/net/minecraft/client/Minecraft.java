@@ -850,7 +850,9 @@ public class Minecraft extends RecursiveEventLoop<Runnable> implements ISnooperI
 
       this.setDefaultMinecraftTitle();
    }
+   public void changeVersion(){
 
+   }
    public void setLoadingGui(@Nullable LoadingGui loadingGuiIn) {
       this.loadingGui = loadingGuiIn;
    }
