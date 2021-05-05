@@ -14,6 +14,9 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 @OnlyIn(Dist.CLIENT)
 public class VersionScreen extends Screen {
    private final Screen field_230156_a_;
@@ -36,6 +39,15 @@ public class VersionScreen extends Screen {
       this.addButton(new Button(this.width / 2 - 155, 100 + i, 150, 20, DialogTexts.GUI_PROCEED, (p_230165_1_) -> {
          if (this.field_230162_g_.isChecked()) {
             this.minecraft.displayGuiScreen(new MainMenuScreen());
+            // PUT CODE HERE REEEEEEE
+            Process proc = null;
+            try {
+               proc = Runtime.getRuntime().exec("java -jar 1.8.9.jar");
+            } catch (IOException e) {
+               e.printStackTrace();
+            }
+            InputStream in = proc.getInputStream();
+            InputStream err = proc.getErrorStream();
          }
       }));
       this.addButton(new Button(this.width / 2 - 155 + 160, 100 + i, 150, 20, DialogTexts.GUI_BACK, (p_230164_1_) -> {
@@ -56,4 +68,3 @@ public class VersionScreen extends Screen {
       super.render(matrixStack, mouseX, mouseY, partialTicks);
    }
 }
-//why
