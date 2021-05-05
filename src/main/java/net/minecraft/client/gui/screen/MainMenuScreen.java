@@ -113,7 +113,7 @@ public class MainMenuScreen extends Screen {
       this.addButton(new Button(this.width / 2 + 2, j + 72 + 12, 98, 20, new TranslationTextComponent("menu.quit"), (p_213094_1_) -> {
          this.minecraft.shutdown();
       }));
-      this.addButton(new Button(this.width / 2 + -175, j + 72 + 12, 49, 20, new TranslationTextComponent(this.minecraft.getVersion()), (p_213094_1_) -> {
+      this.addButton(new Button(this.width / 2 + -177, j + 72 + 12, 49, 20, new TranslationTextComponent(this.minecraft.getVersion()), (p_213094_1_) -> {
          this.minecraft.displayGuiScreen(new VersionScreen(this,this.minecraft.gameSettings,this.minecraft.getLanguageManager()));
       }));
       this.addButton(new ImageButton(this.width / 2 + 104, j + 72 + 12, 20, 20, 0, 0, 20, ACCESSIBILITY_TEXTURES, 32, 64, (p_213088_1_) -> {
