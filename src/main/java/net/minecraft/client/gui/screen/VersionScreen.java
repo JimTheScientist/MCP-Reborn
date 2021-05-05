@@ -53,7 +53,7 @@ public class VersionScreen extends Screen {
       this.addButton(new Button(this.width / 2 - 155 + 160, 100 + i, 150, 20, DialogTexts.GUI_BACK, (p_230164_1_) -> {
          this.minecraft.displayGuiScreen(this.field_230156_a_);
       }));
-      this.field_230162_g_ = new CheckboxButton(this.width / 2 - 155 + 80, 76 + i, 150, 20, field_230159_d_, false);
+      this.field_230162_g_ = new CheckboxButton(this.width / 2 - 155 + 70, 76 + i, 150, 20, field_230159_d_, false);
       this.addButton(this.field_230162_g_);
    }
 
